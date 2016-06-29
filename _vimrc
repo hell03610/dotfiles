@@ -65,11 +65,15 @@ let mapleader=","
 let g:bufferline_echo = 0         " Don't print bufferline bar
 let g:mustache_abbreviations = 1
 
+" Indent guides
 let g:indent_guides_start_level = 4
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#cccccc ctermbg=238
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#999999 ctermbg=238
+
+" Better whitespace
+autocmd BufWritePre * StripWhitespace
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
