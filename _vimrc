@@ -91,6 +91,11 @@ let g:bufferline_echo = 0
   autocmd VimEnter *
     \ let &statusline='%{bufferline#refresh_status()}'
     \ .bufferline#get_status_string()
+    
+    
+"bbye
+:nnoremap <Leader>q :Bdelete<CR>
+:nnoremap <Leader>qa :bufdo :Bdelete<CR>
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
