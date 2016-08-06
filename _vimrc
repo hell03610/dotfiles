@@ -97,6 +97,23 @@ let g:bufferline_echo = 0
 :nnoremap <Leader>q :Bdelete<CR>
 :nnoremap <Leader>qa :bufdo :Bdelete<CR>
 
+" Easier navigation between split windows
+:nnoremap <c-j> <c-w>j
+:nnoremap <c-k> <c-w>k
+:nnoremap <c-h> <c-w>h
+:nnoremap <c-l> <c-w>l
+
+" indent
+nmap <Left> <<
+nmap <Right> >>
+vmap <Left> <gv
+vmap <Right> >gv
+
+" move up/down
+nmap <Up> :m .-2<CR>==
+nmap <Down> :m .+1<CR>==
+
+
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
