@@ -45,6 +45,7 @@ set visualbell                    " No beeping.
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
+set noswapfile                    " And again.:
 
 set laststatus=2                  " Show the status line all the time
 set listchars=tab:▸\ ,eol:¬
