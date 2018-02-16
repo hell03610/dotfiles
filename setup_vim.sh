@@ -11,7 +11,7 @@ git clone https://github.com/moll/vim-bbye.git
 
 git clone https://github.com/jelera/vim-javascript-syntax.git
 git clone https://github.com/hoopes/JavaScript-Indent.git
-cd Javascript-Indent
+cd JavaScript-Indent
 git checkout no-echo
 cd ..
 
