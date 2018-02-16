@@ -92,8 +92,8 @@ let g:bufferline_echo = 0
   autocmd VimEnter *
     \ let &statusline='%{bufferline#refresh_status()}'
     \ .bufferline#get_status_string()
-    
-    
+
+
 "bbye
 :nnoremap <Leader>q :Bdelete<CR>
 :nnoremap <Leader>qa :bufdo :Bdelete<CR>
@@ -105,17 +105,37 @@ let g:bufferline_echo = 0
 :nnoremap <c-l> <c-w>l
 
 " indent
-nmap <Left> <<
-nmap <Right> >>
+" nmap <Left> <<
+" nmap <Right> >>
 vmap <Left> <gv
 vmap <Right> >gv
 
 " move up/down
-nmap <Up> :m .-2<CR>==
-nmap <Down> :m .+1<CR>==
+" map <Up> :m .-2<CR>==
+" map <Down> :m .+1<CR>==
 
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_root_markers = ['.ctrlp']
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+
+" Creating a mapping to turn it on and off:
+map <leader>l :RainbowLevelsToggle<cr>
+let g:rainbow_levels = [
+    \{'ctermbg': 232, 'guibg': '#080808'},
+    \{'ctermbg': 233, 'guibg': '#121212'},
+    \{'ctermbg': 234, 'guibg': '#1c1c1c'},
+    \{'ctermbg': 235, 'guibg': '#262626'},
+    \{'ctermbg': 222, 'guibg': '#ffd787'},
+    \{'ctermbg': 9,   'guibg': '#cc7833'},
+    \{'ctermbg': 1,   'guibg': '#da4939'},
+    \{'ctermbg': 160, 'guibg': '#870000'},
+    \{'ctermbg': 160, 'guibg': '#870000'},
+    \{'ctermbg': 160, 'guibg': '#870000'},
+    \{'ctermbg': 160, 'guibg': '#870000'},
+    \{'ctermbg': 160, 'guibg': '#870000'},
+    \{'ctermbg': 160, 'guibg': '#870000'}]
