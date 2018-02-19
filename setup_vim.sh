@@ -18,3 +18,4 @@ cd ..
 git clone https://github.com/hell03610/vim-evolution.git
 git clone https://github.com/hell03610/vim-ember-hbs.git
 git clone https://github.com/thiagoalessio/rainbow_levels.vim.git
+git clone https://github.com/kien/ctrlp.vim.git
