@@ -139,3 +139,12 @@ let g:rainbow_levels = [
     \{'ctermbg': 160, 'guibg': '#870000'},
     \{'ctermbg': 160, 'guibg': '#870000'},
     \{'ctermbg': 160, 'guibg': '#870000'}]
+    
+" Reveal file in tree
+map <leader>n :NERDTreeFind<cr>
+map <leader>m :NERDTreeToggle<cr>
+
+" disable visual bell - https://vi.stackexchange.com/questions/4653/vim-still-flashing-when-it-shouldnt-be
+set vb t_vb=
+
+    
