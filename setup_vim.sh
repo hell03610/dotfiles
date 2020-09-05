@@ -1,6 +1,5 @@
-cp _vimrc ~/.vimrc
-
-cd ~/.vim/bundle
+mkdir -p ~/.vim/pack/vendor/start
+cd ~/.vim/pack/vendor/start
 
 git clone https://github.com/scrooloose/nerdtree
 git clone https://github.com/dsawardekar/portkey.git
