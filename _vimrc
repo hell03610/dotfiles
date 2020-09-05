@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 set encoding=utf-8
 set nocompatible                  " Must come first because it changes other options.
 set mouse=a
